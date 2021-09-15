@@ -74,7 +74,7 @@ export const Home = ( props:Props ) => {
             <nav>
                 <div className={classes.navbar_container}>
                     <h1 className={ `${classes.logo}` }>
-                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` } >Killer Klown Drone Company</a>
+                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` } >Killer Klown Throne Company</a>
                     </h1>
                     <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
                         <li>
@@ -96,12 +96,11 @@ export const Home = ( props:Props ) => {
             <main className={classes.main}>
                 <div className={classes.main_text}>
                     <h1> { props.title } </h1>
-                    <p>I Like Drones</p>
+                    <p>I Like Thrones</p>
                     <Button color='primary' variant='contained'>Click Here</Button>
                 </div>
 
             </main>
-            Hello World 😉!
         </div>
     )
 }
