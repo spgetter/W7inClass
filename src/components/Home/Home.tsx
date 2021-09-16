@@ -7,6 +7,10 @@ import drone_image from '../../assets/images/sample_drone_image.jpg';
 
 import { Link } from 'react-router-dom';
 
+// Imports for Authorization
+import { AuthCheck } from 'reactfire'; // New Import
+import { Suspense } from 'react';
+
 interface Props{
     title: string;
 }
@@ -79,13 +83,22 @@ export const Home = ( props:Props ) => {
                     <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
                         <li>
                             <Link to='/' className={classes.nav_a}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to='/dashboard'  className={classes.nav_a}>Dashboard</Link>
-                        </li>
-                        <li>
-                            <Link to='/signin'  className={classes.nav_a}>Sign In</Link>
-                        </li>
+                        </li>                        
+                        <Suspense fallback={'loading...'}>
+                            <AuthCheck fallback={
+                                <li>
+                                    <Link to="/signin" className={classes.nav_a}>Sign In</Link>
+                                </li>
+                            }>
+                            
+                                <li>
+                                    <Link to="/dashboard" className={classes.nav_a}>Dashboard</Link>
+                                </li>
+                                <li>
+                                    <Link to="/signin" className={classes.nav_a}>Sign Out</Link>
+                                </li>
+                            </AuthCheck>
+                        </Suspense>
                     </ul>
 
                     
@@ -104,3 +117,4 @@ export const Home = ( props:Props ) => {
         </div>
     )
 }
+

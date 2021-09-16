@@ -12,25 +12,27 @@ import { firebaseConfig } from './firebaseConfig';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={ store }>
-      <Router>
-        <Switch>
+    <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
+      <Provider store={ store }>
+        <Router>
+          <Switch>
 
-          <Route exact path='/'>
-            <Home title={"Thrones Inventory"} />
-          </Route>
+            <Route exact path='/'>
+              <Home title={"Thrones Inventory"} />
+            </Route>
 
-          <Route path='/dashboard'>
-            <Dashboard />
-          </Route>
+            <Route path='/dashboard'>
+              <Dashboard />
+            </Route>
 
-          <Route path='/signin'>
-            <Signin />
-          </Route>
+            <Route path='/signin'>
+              <Signin />
+            </Route>
 
-        </Switch>
-      </Router>
-    </Provider>
+          </Switch>
+        </Router>
+      </Provider>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
