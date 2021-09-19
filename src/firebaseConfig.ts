@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyDqFlkf5VLRw_xWFey1p3L1-GIQYarjsXE",
-  authDomain: "drone-inventory-stephen.firebaseapp.com",
-  projectId: "drone-inventory-stephen",
-  storageBucket: "drone-inventory-stephen.appspot.com",
-  messagingSenderId: "870557009066",
-  appId: "1:870557009066:web:448f43ae7084236389fcd3"
+  apiKey: "AIzaSyBAUK8RNNoYX4J7RugujnqVyTMX1fjy9zM",
+  authDomain: "marvel-inventory-stephen.firebaseapp.com",
+  projectId: "marvel-inventory-stephen",
+  storageBucket: "marvel-inventory-stephen.appspot.com",
+  messagingSenderId: "612678233713",
+  appId: "1:612678233713:web:f6fb63313fcae3de7135d0"
 };

@@ -3,7 +3,7 @@ import React from 'react';
 // Imports for styling
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import drone_image from '../../assets/images/sample_drone_image.jpg';
+import hero_image from '../../assets/images/sample_hero_image.jpg';
 
 import { Link } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ const useStyles = makeStyles({
         color: 'black'
     },
     main: {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${drone_image});`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero_image});`,
         width: '100%',
         height: '100%',
         backgroundSize: 'cover',
@@ -78,7 +78,7 @@ export const Home = ( props:Props ) => {
             <nav>
                 <div className={classes.navbar_container}>
                     <h1 className={ `${classes.logo}` }>
-                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` } >Killer Klown Throne Company</a>
+                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` } >Super Marvel Heroes!</a>
                     </h1>
                     <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
                         <li>
@@ -109,7 +109,7 @@ export const Home = ( props:Props ) => {
             <main className={classes.main}>
                 <div className={classes.main_text}>
                     <h1> { props.title } </h1>
-                    <p>I Like Thrones</p>
+                    <p>I Like Heroes</p>
                     <Button color='primary' variant='contained'>Click Here</Button>
                 </div>
 

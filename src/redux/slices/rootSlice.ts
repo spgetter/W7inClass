@@ -3,25 +3,20 @@ import { createSlice } from '@reduxjs/toolkit';
 const rootSlice = createSlice({
     name: "root",
     initialState: {
-        name: 'classic drone',
-        price: "2000.00",
-        description: "Redefine what's possible",
-        camera_quality: '4k',
-        flight_time: 'Approx 20mins',
-        max_speed: '140 kph',
-        dimensions: '255 x 312 x 127mm',
-        weight: 'Approx 795g',
-        cost_of_product: 450.00,
-        series: 'DJI FPV Series'
+        hero_name: 'Spider Man',
+        real_name: "Peter Parker",
+        description: "Orphaned as a toddler, he had to live with his Uncle Ben and Aunt May. During a science exhibition, he was bitten by a Radioactive Spider, granting him his powers.",
+        comics_appeared_in: '14374',
+        super_power: 'Spider Physiology'
     },
     reducers: {
-        chooseName: (state, action) => { state.name = action.payload},
-        choosePrice: (state, action) => { state.price = action.payload},
-        chooseCamera: (state, action) => { state.camera_quality = action.payload},
-        chooseSpeed: (state, action) => { state.max_speed = action.payload}
+        chooseHeroName: (state, action) => { state.hero_name = action.payload},
+        chooseRealName: (state, action) => { state.real_name = action.payload},
+        chooseComics: (state, action) => { state.comics_appeared_in = action.payload},
+        choosePower: (state, action) => { state.super_power = action.payload}
     }
 })
 
 // Export Reducer
 export const reducer = rootSlice.reducer;
-export const { chooseName, choosePrice, chooseCamera, chooseSpeed, } = rootSlice.actions;
+export const { chooseHeroName, chooseRealName, chooseComics, choosePower  } = rootSlice.actions;

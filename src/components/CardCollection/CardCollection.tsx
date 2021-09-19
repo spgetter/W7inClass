@@ -26,7 +26,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
-import { DataTable, DroneForm } from '../../components'; 
+import { DataTable, HeroForm } from '..'; 
 
 const drawerWidth = 240;
 
@@ -95,13 +95,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-interface DashProps{
+interface CardProps{
     history: RouteComponentProps["history"];
     location: RouteComponentProps['location'];
     match: RouteComponentProps['match'];
 }
 
-export const Dashboard = withRouter(( props:DashProps ) => {
+export const CardCollection = withRouter(( props:CardProps ) => {
     console.log(props)
     const { history } = props;
     const classes = useStyles();
@@ -156,15 +156,15 @@ export const Dashboard = withRouter(( props:DashProps ) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Dashboard 📊
+              CardCollection 🎴
             </Typography>
-            <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Throne</Button>
+            <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Hero</Button>
             {/* Dialog Pop Up Here */}
             <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
-              <DialogTitle id="form-dialog-title">Add New Drone</DialogTitle>
+              <DialogTitle id="form-dialog-title">Add New Hero</DialogTitle>
               <DialogContent>
-                <DialogContentText>Add A New Drone</DialogContentText>
-                  <DroneForm />
+                <DialogContentText>Add A New Hero</DialogContentText>
+                  <HeroForm />
               </DialogContent>
               <DialogActions>
                 <Button onClick = {handleDialogClickClose} color="primary">Cancel</Button>
@@ -205,7 +205,7 @@ export const Dashboard = withRouter(( props:DashProps ) => {
           })}
         >
           <div className={classes.drawerHeader} />
-          <h1>Stephen's Killer Thrones</h1>
+          <h1>Your Heroes</h1>
           <DataTable />
         </main>
       </div>

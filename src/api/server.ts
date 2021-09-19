@@ -1,5 +1,5 @@
-let token = `9499f507f2612976d16c1c495768dd094282a921698f3b39`;
-let my_url = `https://drone-inventory-stephen.herokuapp.com/api/drones`
+let token = `1a54c494a55b06e3f2d09a85c95859aa7bcd06c458394261`;
+let my_url = `https://marvel-inventory-stephen.herokuapp.com/api/heroes`
 
 export const server_calls = {
     get: async () => {

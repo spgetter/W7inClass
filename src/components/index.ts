@@ -1,5 +1,5 @@
 export * from './Home';
-export * from './Dashboard';
+export * from './CardCollection';
 export * from './Signin';
 export * from './DataTable';
-export * from './DroneForm';
+export * from './HeroForm';

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home, Dashboard, Signin } from './components';
+import { Home, CardCollection, Signin } from './components';
 import './styles.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -12,17 +12,17 @@ import { firebaseConfig } from './firebaseConfig';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
+    <FirebaseAppProvider suspense={ true } firebaseConfig={ firebaseConfig }>
       <Provider store={ store }>
         <Router>
           <Switch>
 
             <Route exact path='/'>
-              <Home title={"Thrones Inventory"} />
+              <Home title={"Heroes Inventory"} />
             </Route>
 
-            <Route path='/dashboard'>
-              <Dashboard />
+            <Route path='/cardcollection'>
+              <CardCollection />
             </Route>
 
             <Route path='/signin'>
